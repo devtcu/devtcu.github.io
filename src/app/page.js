@@ -5,12 +5,10 @@ import { useState, useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
 import { getAssetPath } from '../utils/assetHelpers';
 
-// helper functions for browser detection and environment...
 const isBrowser = () => typeof window !== 'undefined';
 const isProduction = process.env.NODE_ENV === 'production';
 const safeDomOperation = (callback) => {
   if (isBrowser()) {
-    // a delay execution to ensure DOM is fully loaded
     setTimeout(() => {
       try {
         callback();
@@ -31,20 +29,17 @@ export default function Home() {
   const birdsRef = useRef(null);
   const starsRef = useRef(null);
 
-  //bEFORE animations
   useEffect(() => {
     if (!isBrowser()) return;
     
-    //letus disable scroll restoration and scroll immediately
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
     
-    //immediate scroll
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'auto' // instant, no smooth scrolling
+      behavior: 'auto'
     });
     
 
@@ -84,7 +79,7 @@ export default function Home() {
           if (entry.isIntersecting) {
             setTimeout(() => {
               entry.target.classList.add('animate-fade-in');
-            }, index * 150); // Staggered delay
+            }, index * 150);
             cardObserver.unobserve(entry.target);
           }
         });
@@ -111,14 +106,11 @@ export default function Home() {
       };
     };
     
-    // delay a bit before setting up animations to avoid triggering during scroll-to-top
     setTimeout(setupAnimations, 100);
     
   }, []);
 
-  // parallax effect for wave background
   useEffect(() => {
-    // Skip on server-side
     if (!isBrowser()) return;
     
     const handleParallax = () => {
@@ -132,15 +124,11 @@ export default function Home() {
       const heroHeight = heroSection.offsetHeight;
       const headerHeight = document.querySelector('nav')?.offsetHeight || 0;
       
-      //how far we've scrolled within the section as a percentage
-      // start calculating from when the section is at the top of the viewport
       const scrollPercent = Math.min(1, scrollPosition / (heroHeight - headerHeight));
       
-      //pply parallax effect to the wave background - horizontal movement
       const waveBg = parallaxRef.current.querySelector('.wave-bg');
       
       if (waveBg) {
-        // Move the wave background horizontally as we scroll
         waveBg.style.transform = `translateX(-${scrollPercent * 10}%)`;
       }
     };
@@ -153,15 +141,12 @@ export default function Home() {
     };
   }, []);
   
-  // horizontal bird movement across About Me title - simplified approach
   useEffect(() => {
-    // Skip on server-side
     if (!isBrowser()) return;
     
     let lastScrollY = window.scrollY;
     let ticking = false;
     
-    // Simple function to animate birds flying across the About section
     const updateBirds = () => {
       if (!birdsRef.current || !aboutRef.current) return;
       
@@ -171,26 +156,19 @@ export default function Home() {
       const aboutRect = aboutSection.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Only activate birds when about section is visible or approaching
       const isSectionVisible = aboutRect.top < windowHeight && aboutRect.bottom > 0;
       const isSectionApproaching = aboutRect.top < windowHeight + 200;
       
       if (isSectionApproaching) {
-        // Calculate scroll position relative to the about section
-        // 0 = section just entered viewport, 1 = section is at top of viewport
         const scrollProgress = Math.min(1, Math.max(0, 
           (windowHeight - aboutRect.top) / windowHeight
         ));
         
         const birds = Array.from(birdsRef.current.querySelectorAll('.bird'));
         
-        // Animate each bird
         birds.forEach((bird, index) => {
-          // Stagger the birds
           const delay = index * 0.15;
           
-          // Calculate position - adjust these multipliers to change speed
-          // CUSTOMIZATION POINT: Modify these values to change bird movement
           const viewportWidth = window.innerWidth;
           const moveDistance = viewportWidth * 1.5; // ADJUST THIS: higher = faster movement, ensure birds exit screen
           
@@ -812,8 +790,42 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Devansh Kalluhole Matham",
+            "alternateName": ["Devansh Matham", "Devansh Kalluhole"],
+            "url": "https://devtcu.github.io/",
+            "image": "https://devtcu.github.io/profile-1753671946.jpg",
+            "jobTitle": "Research Associate",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Texas Christian University"
+            },
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Texas Christian University"
+            },
+            "knowsAbout": [
+              "Physics",
+              "Machine Learning",
+              "Graph Neural Networks",
+              "Topological Data Analysis",
+              "CUDA Programming",
+              "Computational Biology",
+              "Deep Learning"
+            ],
+            "sameAs": [
+              "https://github.com/devtcu",
+              "https://www.linkedin.com/in/devansh-km/"
+            ]
+          })
+        }}
+      />
       <style jsx global>{animationStyles}</style>
-      {/* In Next.js App Router, head tags are defined in a separate metadata object or layout.js file */}
 
       {/* Top touch/hover area for showing header */}
       <div 

@@ -17,7 +17,7 @@ export default function Blog() {
     }
   ]);
 
-  const categories = ["All", "Machine Learning", "Mathematics", "Life"];
+  const categories = ["All", "Physics", "Mathematics", "Computation", "Life"];
   
   const filteredArticles = selectedCategory === "All" 
     ? articles 

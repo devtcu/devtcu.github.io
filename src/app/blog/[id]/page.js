@@ -1,12 +1,16 @@
 "use client";
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+  ];
+}
 
 export default function BlogPost() {
   const params = useParams();
-  const [post, setPost] = useState(null);
 
   const articles = {
     "1": {
@@ -21,11 +25,7 @@ export default function BlogPost() {
     }
   };
 
-  useEffect(() => {
-    if (params.id && articles[params.id]) {
-      setPost(articles[params.id]);
-    }
-  }, [params.id]);
+  const post = articles[params.id];
 
   if (!post) {
     return (
