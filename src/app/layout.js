@@ -56,6 +56,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`bg-black ${jetbrainsMono.variable}`}>
       <head>
+        <meta name="google-site-verification" content="p2NwQNNe4429BIzI-paQYB9npZTRUVZRS56JvCnwyak" />
         <link rel="canonical" href="https://devtcu.github.io/" />
         <meta name="author" content="Devansh Kalluhole Matham" />
         <link rel="preload" href="/parallax/star.gif" as="image" />
