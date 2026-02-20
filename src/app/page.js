@@ -697,18 +697,18 @@ export default function Home() {
             <h2 ref={aboutRef} className="text-3xl font-bold text-blue-500 inline-block opacity-0 relative z-10 mb-11">About Me</h2>
           </div>
           <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto relative" style={{ zIndex: 2 }}>
-            &nbsp;&nbsp;&nbsp;&nbsp;I'm a passionate researcher who graduated from Texas Christian University with a B.S in Physics in May 2025. 
-            I've been actively involved in a variety of project, including computational, solid state, and atomic physics. 
+            &nbsp;&nbsp;&nbsp;&nbsp;Hey there! I'm a passionate researcher and current physics graduate student at CUNY (City College). 
+            Over the past few years, I've been involved in a variety of projects in computational, solid state, and atomic physics. 
              <br /><br />
             &nbsp;&nbsp;&nbsp;&nbsp;
-            Currently, I work as a research associate where I combine topology and Graph Neural Networks to simulate biological phenomena. I'm developing a framework to run agent-based models to run on NVIDIA GPU's using CUDA. You can find some of my work and updates below!
+            Most recently, I worked as a research associate where I combined topology and graph neural networks to simulate biological phenomena. I'm developing a framework to run agent-based models to run on NVIDIA GPU's using CUDA. You can find some of my work and updates below!
              <br /><br />
             &nbsp;&nbsp;&nbsp;&nbsp;My previous research endeavors include working as an undergraduate research assistant at Texas Christian University,
             where I studied surface properties of nanocrystalline oxides through spectroscopy, while also engineering UHV components
             to enable cathodoluminescence imaging. I have presented my research at various APS conferences
             around Texas and won multiple best presenter awards.    
              <br /><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;I'm actively searching for opportunities to apply and grow my skills. Feel free to reach out to my email or connect with me on Linkedin! 
+              &nbsp;&nbsp;&nbsp;&nbsp;I'm actively searching for opportunities/collaborations to apply and grow my skills. Feel free to reach out to my email or connect with me on Linkedin! 
         
           </p>
           
