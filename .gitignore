@@ -16,6 +16,12 @@
 # next.js
 /.next/
 # Keep /out/ for GitHub Pages deployment
+/out/cache/
+/out/server/
+/out/trace
+/out/types/
+/out/static/webpack/
+/out/static/development/
 
 # misc
 .DS_Store

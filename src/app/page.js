@@ -934,12 +934,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 ref={contactRef} className="text-3xl font-bold text-white text-center opacity-0">Contact Me</h2>
           <div className="mt-8 flex flex-col items-center justify-center">
-            <a href="mailto:d.kalluholematham@tcu.edu" className="social-icon text-gray-400 hover:text-red-400 transition-all duration-300 transform hover:scale-110 p-2 text-center">
+            <a href="mailto:dkalluh000@citymail.cuny.edu" className="social-icon text-gray-400 hover:text-red-400 transition-all duration-300 transform hover:scale-110 p-2 text-center">
               <span className="sr-only">Email</span>
               <svg className="h-20 w-20 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
               </svg>
-              <p className="text-center text-gray-400 mt-3 font-medium">d.kalluholematham@tcu.edu</p>
+              <p className="text-center text-gray-400 mt-3 font-medium">dkalluh000@citymail.cuny.edu</p>
             </a>
           </div>
         </div>

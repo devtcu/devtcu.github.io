@@ -12,7 +12,6 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif']
   },
   output: 'export',
-  distDir: 'out',
   env: {
     NEXT_PUBLIC_BASE_PATH: '',
   },
