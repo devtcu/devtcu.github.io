@@ -21,11 +21,9 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm clean-install --no-fund --no-audit --prefer-offline
+          npm ci --no-fund --no-audit
           npm run export
           touch out/.nojekyll
-          cp public/_headers out/
-          cp public/files/Resume.pdf out/files/Resume.pdf
         env:
           NODE_ENV: production
 

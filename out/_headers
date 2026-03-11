@@ -1,6 +1,10 @@
+/files/Resume.pdf
+  Content-Type: application/pdf
+  Content-Disposition: attachment; filename=Resume.pdf
+
 /files/CV.pdf
   Content-Type: application/pdf
-  Content-Disposition: attachment; filename=CV.pdf
+  Content-Disposition: attachment; filename=Resume.pdf
 
 /files/*.pdf
   Content-Type: application/pdf
