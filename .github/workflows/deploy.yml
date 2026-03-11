@@ -25,7 +25,7 @@ jobs:
           npm run export
           touch out/.nojekyll
           cp public/_headers out/
-          cp public/files/finCV.pdf out/files/finCV.pdf
+          cp public/files/Resume.pdf out/files/Resume.pdf
         env:
           NODE_ENV: production
 

@@ -675,7 +675,7 @@ export default function Home() {
             </a>
             
             <a 
-              href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/files/CV.pdf`} 
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/files/Resume.pdf`} 
               rel="noopener noreferrer" 
               className="social-icon group flex flex-col items-center">
               <div className="text-gray-400 group-hover:text-green-400 transition-all duration-300">
@@ -683,7 +683,7 @@ export default function Home() {
                   <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM16 18H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                 </svg>
               </div>
-              <span className="mt-2 text-sm text-gray-400 group-hover:text-green-400 transition-all duration-300">CV</span>
+              <span className="mt-2 text-sm text-gray-400 group-hover:text-green-400 transition-all duration-300">Resume</span>
             </a>
           </div>
           

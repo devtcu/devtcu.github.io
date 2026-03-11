@@ -8,9 +8,9 @@ echo "🚀 Starting cache-busting deployment..."
 # Get current timestamp for cache busting
 TIMESTAMP=$(date +%s)
 
-# Build the project
+# Build and export the project
 echo "📦 Building your Next.js project..."
-npm run build
+npm run export
 
 # Add .nojekyll file to prevent GitHub Pages from using Jekyll
 echo "🔧 Adding .nojekyll file..."
