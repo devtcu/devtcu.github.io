@@ -22,7 +22,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci --no-fund --no-audit
-          npm run export
+          ./build.sh
           touch out/.nojekyll
         env:
           NODE_ENV: production
